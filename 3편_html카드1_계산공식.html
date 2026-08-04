@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>종합부동산세 계산 공식 4단계 | 15억원 아파트 예시로 이해하기</title>
+
+<meta property="og:title" content="종부세, 이렇게 계산됩니다 | 4단계 공식 + 실제 예시" />
+<meta property="og:description" content="과세표준 산정부터 세부담 상한까지, 종합부동산세가 산출되는 4단계 공식을 공시가격 15억원 아파트 예시로 쉽게 풀어봤습니다." />
+<meta property="og:image" content="https://your-blog-domain.com/images/2026-jongbusae-thumbnail.png" />
+<meta property="og:url" content="https://your-blog-domain.com/2026-korea-jongbusae-calculation" />
+<meta property="og:type" content="article" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/dist/tabler-icons.min.css" />
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .rp-wrap {
+    background: linear-gradient(180deg, #F8FAFD 0%, #EEF1F7 100%);
+    border: 1px solid #E2E6ED; border-radius: 20px;
+    padding: 40px 36px 34px; font-family: 'Noto Sans KR', sans-serif;
+    color: #142033; max-width: 800px; margin: 32px auto;
+  }
+  .rp-eyebrow {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 700; color: #B8862E;
+    background: #FFFFFF; border: 1.5px solid #E7D6B2;
+    padding: 6px 14px; border-radius: 999px;
+  }
+  .rp-title {
+    font-family: 'Noto Serif KR', serif; font-weight: 700;
+    font-size: 27px; line-height: 1.4; color: #142033; margin-top: 16px;
+  }
+  .rp-sub { font-size: 15px; color: #4A5568; margin-top: 8px; line-height: 1.6; }
+
+  .steps { margin-top: 26px; display: flex; flex-direction: column; gap: 0; }
+  .step { display: flex; gap: 16px; }
+  .step-line { display: flex; flex-direction: column; align-items: center; }
+  .step-num {
+    width: 32px; height: 32px; border-radius: 50%; background: #142033; color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;
+    flex-shrink: 0;
+  }
+  .step-connector { width: 2px; flex: 1; background: #D8DEE9; min-height: 24px; }
+  .step-body { padding-bottom: 22px; flex: 1; }
+  .step-body h5 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .step-formula {
+    font-family: 'Roboto Mono', monospace; font-size: 13px; background: #FFFFFF;
+    border: 1px solid #E7EAF0; border-radius: 8px; padding: 8px 12px; margin: 6px 0;
+    color: #142033; display: inline-block;
+  }
+  .step-body p { font-size: 12.5px; color: #6B7688; line-height: 1.55; }
+
+  .example {
+    margin-top: 8px; background: #142033; border-radius: 16px; padding: 20px 22px; color: #fff;
+  }
+  .example h4 { font-size: 14px; font-weight: 700; color: #E7D6B2; margin-bottom: 12px; display:flex; align-items:center; gap:7px;}
+  .example-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 13px; }
+  .example-row:last-child { border-bottom: none; }
+  .example-row .lbl { color: #B8C2D6; }
+  .example-row .val { font-family: 'Roboto Mono', monospace; font-weight: 700; }
+  .example-row.final .val { color: #E7D6B2; font-size: 16px; }
+
+  .rp-footer {
+    margin-top: 22px; padding-top: 16px; border-top: 1px solid #E2E6ED;
+    font-size: 11.5px; color: #9AA3B2; line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="rp-wrap">
+  <span class="rp-eyebrow"><i class="ti ti-calculator"></i> HOW IT'S CALCULATED</span>
+  <div class="rp-title">종부세, 이렇게 계산됩니다 — 4단계 공식</div>
+  <div class="rp-sub">복잡해 보이지만 사실 네 단계만 이해하면 끝입니다. 공시가격 15억원 1주택자 예시로 함께 따라가 볼게요.</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-line"><div class="step-num">1</div><div class="step-connector"></div></div>
+      <div class="step-body">
+        <h5>과세표준 산정</h5>
+        <div class="step-formula">(공시가격 − 기본공제) × 공정시장가액비율</div>
+        <p>공시가격 합계에서 기본공제(거주 1주택 14억원 등)를 뺀 뒤, 공정시장가액비율(현행 60%)을 곱합니다.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-line"><div class="step-num">2</div><div class="step-connector"></div></div>
+      <div class="step-body">
+        <h5>세율 적용</h5>
+        <div class="step-formula">과세표준 × 세율 − 누진공제</div>
+        <p>과세표준 구간별 누진세율(0.5%~5.0%)을 적용해 산출세액을 계산합니다.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-line"><div class="step-num">3</div><div class="step-connector"></div></div>
+      <div class="step-body">
+        <h5>공제 차감</h5>
+        <div class="step-formula">산출세액 − 재산세 중복분 − 세액공제</div>
+        <p>이미 낸 재산세와 이중과세되는 부분, 장기보유·고령자 세액공제(1주택자 한정)를 뺍니다.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-line"><div class="step-num">4</div></div>
+      <div class="step-body">
+        <h5>세부담 상한 적용</h5>
+        <div class="step-formula">전년 대비 150%(2026 개편 후 200%) 초과분 제외</div>
+        <p>아무리 세율이 올라도 전년보다 일정 비율 이상은 늘어나지 않도록 상한을 둡니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4><i class="ti ti-file-analytics"></i> 예시 · 공시가격 15억원, 거주 1주택자</h4>
+    <div class="example-row"><span class="lbl">공시가격</span><span class="val">15억원</span></div>
+    <div class="example-row"><span class="lbl">− 기본공제(거주 1주택)</span><span class="val">12억원</span></div>
+    <div class="example-row"><span class="lbl">= 초과분</span><span class="val">3억원</span></div>
+    <div class="example-row"><span class="lbl">× 공정시장가액비율 60%</span><span class="val">1억 8,000만원</span></div>
+    <div class="example-row final"><span class="lbl">과세표준</span><span class="val">1억 8,000만원</span></div>
+  </div>
+
+  <div class="rp-footer">
+    <i class="ti ti-info-circle"></i> 위 예시는 과세표준 산정 단계만 보여주는 단순화한 계산입니다. 실제 납부세액은 세율 적용, 재산세 중복분 공제, 세액공제, 세부담상한까지 반영해야 확정되며 개인별로 달라질 수 있습니다. 정확한 세액은 국세청 홈택스 또는 세무 전문가 상담을 통해 확인하세요.
+  </div>
+</div>
+
+</body>
+</html>
