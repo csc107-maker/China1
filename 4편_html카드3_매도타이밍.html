@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>다주택자 양도세 중과, 언제 팔아야 유리할까 | 매도 타이밍 시뮬레이션</title>
+
+<meta property="og:title" content="다주택자, 언제 팔아야 유리할까 | 양도세 중과 매도 타이밍 시뮬레이션" />
+<meta property="og:description" content="2026년 재시행된 다주택자 양도세 중과가 2027~2028년 완화됐다가 2029년 원상복귀됩니다. 양도차익 5억원 기준 시점별 세액을 계산했습니다." />
+<meta property="og:image" content="https://your-blog-domain.com/images/2026-yangdosae-thumbnail.png" />
+<meta property="og:url" content="https://your-blog-domain.com/2026-korea-capital-gains-tax" />
+<meta property="og:type" content="article" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/dist/tabler-icons.min.css" />
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .rp-wrap {
+    background: linear-gradient(180deg, #F8FAFD 0%, #EEF1F7 100%);
+    border: 1px solid #E2E6ED; border-radius: 20px;
+    padding: 40px 36px 34px; font-family: 'Noto Sans KR', sans-serif;
+    color: #142033; max-width: 840px; margin: 32px auto;
+  }
+  .rp-eyebrow {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 700; color: #C1443B;
+    background: #FFFFFF; border: 1.5px solid #F3C9C5;
+    padding: 6px 14px; border-radius: 999px;
+  }
+  .rp-title {
+    font-family: 'Noto Serif KR', serif; font-weight: 700;
+    font-size: 25px; line-height: 1.4; color: #142033; margin-top: 16px;
+  }
+  .rp-sub { font-size: 15px; color: #4A5568; margin-top: 8px; line-height: 1.6; }
+  .assump {
+    margin-top: 18px; background: #FBF3E4; border: 1px solid #E7D6B2; border-radius: 10px;
+    padding: 11px 15px; font-size: 12px; color: #7A5E22;
+  }
+
+  .timeline { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .tl-item {
+    flex: 1 1 150px; background: #fff; border: 1px solid #E7EAF0; border-radius: 12px;
+    padding: 14px 12px; text-align: center;
+  }
+  .tl-item.sweet { border: 1.5px solid #1F8A70; background: #F5FBF8; }
+  .tl-item .yr { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 13px; color: #142033; }
+  .tl-item .surcharge { font-size: 11px; color: #8792A2; margin: 4px 0; }
+  .tl-item .amt { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 17px; color: #C1443B; margin-top: 4px; }
+  .tl-item.sweet .amt { color: #1F8A70; }
+  .tl-item .badge { font-size: 10px; font-weight: 700; color: #1F8A70; margin-top: 4px; }
+
+  .save-box {
+    margin-top: 18px; background: #142033; border-radius: 14px; padding: 18px 20px; color: #fff;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .save-box .big { font-family: 'Roboto Mono', monospace; font-size: 24px; font-weight: 700; color: #E7D6B2; }
+  .save-box p { font-size: 13px; color: #DCE2EC; line-height: 1.5; }
+
+  .rp-footer {
+    margin-top: 22px; padding-top: 16px; border-top: 1px solid #E2E6ED;
+    font-size: 11.5px; color: #9AA3B2; line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="rp-wrap">
+  <span class="rp-eyebrow"><i class="ti ti-clock-dollar"></i> 매도 타이밍</span>
+  <div class="rp-title">다주택자, 언제 팔아야 유리할까</div>
+  <div class="rp-sub">2026년 5월 재시행된 중과세율이 2027~2028년 한시 완화됐다가 2029년 원상복귀됩니다. 시점별 세액을 직접 계산해봤습니다.</div>
+
+  <div class="assump"><b>계산 조건</b> — 조정대상지역 2주택자, 양도차익 5억원(장기보유특별공제 배제 대상), 기본세율 40%구간 적용, 지방소득세 10% 포함 자체 계산.</div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="yr">~2026.5.9</div>
+      <div class="surcharge">중과 유예(참고)</div>
+      <div class="amt">1억9,037만</div>
+    </div>
+    <div class="tl-item">
+      <div class="yr">2026.5.10~</div>
+      <div class="surcharge">+20%p 재시행</div>
+      <div class="amt">2억9,982만</div>
+    </div>
+    <div class="tl-item sweet">
+      <div class="yr">2027년</div>
+      <div class="surcharge">+5%p 완화</div>
+      <div class="amt">2억1,773만</div>
+      <div class="badge">★ 매도 적기</div>
+    </div>
+    <div class="tl-item">
+      <div class="yr">2028년</div>
+      <div class="surcharge">+10%p</div>
+      <div class="amt">2억4,509만</div>
+    </div>
+    <div class="tl-item">
+      <div class="yr">2029년~</div>
+      <div class="surcharge">+20%p 원상복귀</div>
+      <div class="amt">2억9,982만</div>
+    </div>
+  </div>
+
+  <div class="save-box">
+    <div class="big">−8,209만원</div>
+    <p>2026년(중과 20%p) 대비 2027년(중과 5%p)에 매도하면 같은 양도차익 5억원 기준 약 8,209만원을 아낄 수 있다는 계산입니다. 정부가 "매도 기회를 주기 위해" 명시적으로 설계한 2년간의 '퇴로' 구간입니다.</p>
+  </div>
+
+  <div class="rp-footer">
+    <i class="ti ti-info-circle"></i> 위 계산은 2026.08.03 발표된 정부 세제개편안의 중과세율 로드맵(아주경제·뉴시스 보도)을 표준 양도소득세 공식에 대입한 자체 시뮬레이션입니다. 개인별 실제 세액은 취득가액·보유기간·지역 지정 여부에 따라 달라지며, 국회 입법 절차가 남아있어 변경될 수 있습니다. 매도 결정은 세무 전문가와 상담 후 신중히 판단하세요.
+  </div>
+</div>
+
+</body>
+</html>
