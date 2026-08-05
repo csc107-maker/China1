@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>집값별 대출 가능액과 필요 자기자본 | 생애최초 LTV 70% 기준</title>
+
+<meta property="og:title" content="9억원부터 자기자본이 확 늘어나는 이유 | 생애최초 LTV·6억 한도 계산표" />
+<meta property="og:description" content="생애최초 주택구입자 LTV 70%, 대출한도 6억원 상한. 집값별로 실제 대출 가능액과 필요 자기자본이 어떻게 달라지는지 계산했습니다." />
+<meta property="og:image" content="https://your-blog-domain.com/images/2026-loan-strategy-thumbnail.png" />
+<meta property="og:url" content="https://your-blog-domain.com/2026-korea-first-time-buyer-loan" />
+<meta property="og:type" content="article" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/dist/tabler-icons.min.css" />
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .rp-wrap {
+    background: linear-gradient(180deg, #F8FAFD 0%, #EEF1F7 100%);
+    border: 1px solid #E2E6ED; border-radius: 20px;
+    padding: 40px 36px 34px; font-family: 'Noto Sans KR', sans-serif;
+    color: #142033; max-width: 820px; margin: 32px auto;
+  }
+  .rp-eyebrow {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 700; color: #2C4A8C;
+    background: #FFFFFF; border: 1.5px solid #C9D6EE;
+    padding: 6px 14px; border-radius: 999px;
+  }
+  .rp-title {
+    font-family: 'Noto Serif KR', serif; font-weight: 700;
+    font-size: 26px; line-height: 1.4; color: #142033; margin-top: 16px;
+  }
+  .rp-sub { font-size: 15px; color: #4A5568; margin-top: 8px; line-height: 1.6; }
+  .assump {
+    margin-top: 18px; background: #EAF0FB; border: 1px solid #C9D6EE; border-radius: 10px;
+    padding: 11px 15px; font-size: 12px; color: #2C4A8C;
+  }
+
+  .rp-table-wrap { margin-top: 20px; overflow-x: auto; border-radius: 14px; border: 1px solid #E7EAF0; }
+  table { width: 100%; border-collapse: collapse; background: #fff; min-width: 520px; }
+  thead th { background: #142033; color: #fff; font-size: 12.5px; font-weight: 700; text-align: center; padding: 11px 8px; }
+  thead th:first-child { text-align: left; padding-left: 16px; }
+  tbody td { font-size: 13px; padding: 10px 8px; border-top: 1px solid #EDF0F4; color: #3D4657; text-align: center; font-family: 'Roboto Mono', monospace; }
+  tbody td:first-child { font-weight: 700; color: #142033; text-align: left; padding-left: 16px; font-family: 'Noto Sans KR', sans-serif; }
+  tbody tr:nth-child(even) { background: #FAFBFD; }
+  tbody tr.cap td { background: #FDEEEC; }
+  .cap-badge { font-size: 10px; font-weight: 700; color: #C1443B; background: #FDEEEC; padding: 2px 8px; border-radius: 999px; margin-left: 6px; }
+  .fund { font-weight: 700; }
+  .fund.high { color: #C1443B; }
+
+  .insight {
+    margin-top: 18px; background: #142033; border-radius: 14px; padding: 16px 20px; color: #fff;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .insight i { color: #E7D6B2; font-size: 20px; margin-top: 2px; }
+  .insight p { font-size: 13px; line-height: 1.6; color: #DCE2EC; }
+  .insight b { color: #fff; }
+
+  .rp-footer {
+    margin-top: 22px; padding-top: 16px; border-top: 1px solid #E2E6ED;
+    font-size: 11.5px; color: #9AA3B2; line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="rp-wrap">
+  <span class="rp-eyebrow"><i class="ti ti-home-dollar"></i> LTV 계산표</span>
+  <div class="rp-title">집값별 대출 가능액과 필요 자기자본</div>
+  <div class="rp-sub">"LTV 70%"라는 숫자만 보고 계산하면 틀립니다. 대출한도 6억원 상한이 함께 작동하기 때문입니다.</div>
+
+  <div class="assump"><b>계산 조건</b> — 생애최초 주택구입자, 수도권·규제지역 기준 LTV 70%, 대출한도 상한 6억원 적용. 지방·비규제지역은 LTV가 더 높게 적용될 수 있습니다.</div>
+
+  <div class="rp-table-wrap">
+    <table>
+      <thead>
+        <tr><th>주택가격</th><th>LTV 70% 이론상</th><th>실제 대출한도</th><th>필요 자기자본</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>5억원</td><td>3.50억</td><td>3.50억</td><td class="fund">1.50억</td></tr>
+        <tr><td>6억원</td><td>4.20억</td><td>4.20억</td><td class="fund">1.80억</td></tr>
+        <tr><td>7억원</td><td>4.90억</td><td>4.90억</td><td class="fund">2.10억</td></tr>
+        <tr><td>8억원</td><td>5.60억</td><td>5.60억</td><td class="fund">2.40억</td></tr>
+        <tr class="cap"><td>9억원 <span class="cap-badge">한도 도달</span></td><td>6.30억</td><td>6.00억</td><td class="fund high">3.00억</td></tr>
+        <tr class="cap"><td>10억원</td><td>7.00억</td><td>6.00억</td><td class="fund high">4.00억</td></tr>
+        <tr class="cap"><td>12억원</td><td>8.40억</td><td>6.00억</td><td class="fund high">6.00억</td></tr>
+        <tr class="cap"><td>15억원</td><td>10.50억</td><td>6.00억</td><td class="fund high">9.00억</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <i class="ti ti-bulb"></i>
+    <p><b>핵심 포인트</b> — 9억원부터는 LTV 비율과 무관하게 대출액이 6억원에 묶입니다. 집값이 오를수록 필요 자기자본이 비율 이상으로 빠르게 늘어나니, 예산을 짤 때 반드시 "가격 × 70%"가 아니라 "6억원과 비교해 더 작은 값"으로 계산하세요.</p>
+  </div>
+
+  <div class="rp-footer">
+    <i class="ti ti-info-circle"></i> 위 계산은 주택도시기금·국토교통부 고시 기준(2026년 기준)을 표준 LTV 공식에 대입한 예시입니다. 실제 대출 가능액은 DSR, 개인 신용도, 은행별 정책에 따라 추가로 달라질 수 있습니다. 정확한 한도는 기금e든든(enhuf.molit.go.kr) 또는 은행 상담을 통해 확인하세요.
+  </div>
+</div>
+
+</body>
+</html>
