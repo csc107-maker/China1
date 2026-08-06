@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배전망 ESS 사업 진행 현황</title>
+
+<meta property="og:title" content="배전망 ESS 사업, 지금 어디까지 왔나요 | 에이팩브릿지파트너스" />
+<meta property="og:description" content="5,586억 원 규모 배전망 ESS 구축지원사업의 예산, 목표, 1차 선정 결과와 2차 공모 일정을 정리했습니다." />
+<meta property="og:image" content="썸네일 이미지 URL" />
+<meta property="og:url" content="페이지 URL" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    background: #F4F8FB;
+    padding: 32px 16px;
+    color: #1F2D36;
+  }
+  .card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #DCE7EC;
+    border-radius: 20px;
+    padding: 36px 32px 32px;
+    box-shadow: 0 6px 24px rgba(11, 59, 73, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #F2A93B 0%, #1E8F6D 100%);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #1E8F6D;
+    background: #EAF6F0;
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 21px; font-weight: 800; color: #0B3B49; line-height: 1.4; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .subtitle { font-size: 13.5px; color: #64798A; margin-bottom: 24px; line-height: 1.6; }
+
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+  @media (max-width: 560px) { .stat-row { grid-template-columns: 1fr; } }
+  .stat-box { background: #F7FAFB; border: 1px solid #E4ECF0; border-radius: 14px; padding: 14px; text-align: center; }
+  .stat-box .lb { font-size: 10.5px; font-weight: 700; color: #96A5B0; margin-bottom: 6px; }
+  .stat-box .val { font-family: 'IBM Plex Mono', monospace; font-size: 19px; font-weight: 800; color: #14304A; }
+  .stat-box .val .unit { font-size: 11px; font-weight: 600; color: #96A5B0; }
+
+  .timeline { position: relative; padding-left: 30px; margin-bottom: 8px; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 9px; top: 6px; bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, #F2A93B 0%, #1E8F6D 100%);
+  }
+  .item { position: relative; padding-bottom: 16px; }
+  .item:last-child { padding-bottom: 0; }
+  .dot {
+    position: absolute;
+    left: -30px; top: 3px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 3px solid #F2A93B;
+  }
+  .item.milestone .dot { border-color: #1E8F6D; }
+  .item.pending .dot { border-color: #C0392B; border-style: dashed; }
+  .row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; color: #F2A93B; min-width: 90px; }
+  .item.milestone .date { color: #1E8F6D; }
+  .item.pending .date { color: #C0392B; }
+  .label { font-size: 13px; font-weight: 700; color: #14304A; }
+  .desc { font-size: 11.5px; color: #64798A; margin-top: 3px; line-height: 1.5; }
+
+  .source { margin-top: 18px; padding-top: 14px; border-top: 1px dashed #DCE7EC; font-size: 11.5px; color: #8496A3; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="eyebrow"><i class="ti ti-plug-connected"></i>&nbsp;GRID ESS STATUS</span>
+    <h1>배전망 ESS 사업, 지금 어디까지 왔나요</h1>
+    <p class="subtitle">5,586억 원 규모, 2030년까지 재생에너지 1GW 추가 접속이 목표입니다</p>
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="lb">5개년 예산</div><div class="val">5,586<span class="unit">억 원</span></div></div>
+      <div class="stat-box"><div class="lb">2030 목표</div><div class="val">700<span class="unit">MW ESS</span></div></div>
+      <div class="stat-box"><div class="lb">추가 접속 목표</div><div class="val">1<span class="unit">GW 재생E</span></div></div>
+    </div>
+
+    <div class="timeline">
+      <div class="item">
+        <div class="dot"></div>
+        <div class="row"><span class="date">2025.7</span><span class="label">한국형 차세대 전력망 발표</span></div>
+      </div>
+      <div class="item milestone">
+        <div class="dot"></div>
+        <div class="row"><span class="date">2026.7.10</span><span class="label">1차 사업 9개사 선정</span></div>
+        <div class="desc">국비 1,171억 원, 32개 배전선로에 ESS 128MW 구축 → 태양광 182.4MW 추가 접속</div>
+      </div>
+      <div class="item pending">
+        <div class="dot"></div>
+        <div class="row"><span class="date">2026.8</span><span class="label">2차 공모</span></div>
+        <div class="desc">육지 약 50개·제주 7개 배전선로 대상, 20개 안팎 선정 예정</div>
+      </div>
+      <div class="item">
+        <div class="dot"></div>
+        <div class="row"><span class="date">2026.12</span><span class="label">1차 설치 완료</span></div>
+      </div>
+      <div class="item milestone">
+        <div class="dot"></div>
+        <div class="row"><span class="date">2027~</span><span class="label">본격 운전 개시</span></div>
+      </div>
+    </div>
+
+    <div class="source">자료: 기후에너지환경부 · 부산일보(2026.7.10) · 아주경제(2026.7.10) · 무진장인터넷뉴스(2026.7)</div>
+  </div>
+</body>
+</html>
