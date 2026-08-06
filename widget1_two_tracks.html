@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배전망 ESS vs 자가 ESS</title>
+
+<meta property="og:title" content="ESS 연계 태양광, 사실은 두 가지입니다 | 에이팩브릿지파트너스" />
+<meta property="og:description" content="정부가 배전선로에 설치하는 배전망 ESS와, 발전사업자가 직접 결합하는 자가 ESS의 차이를 비교했습니다." />
+<meta property="og:image" content="썸네일 이미지 URL" />
+<meta property="og:url" content="페이지 URL" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    background: #F4F8FB;
+    padding: 32px 16px;
+    color: #1F2D36;
+  }
+  .card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #DCE7EC;
+    border-radius: 20px;
+    padding: 36px 32px 32px;
+    box-shadow: 0 6px 24px rgba(11, 59, 73, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #F2A93B 0%, #1E8F6D 100%);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #0B3B49;
+    background: #EAF1F4;
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 21px; font-weight: 800; color: #0B3B49; line-height: 1.4; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .subtitle { font-size: 13.5px; color: #64798A; margin-bottom: 22px; line-height: 1.6; }
+
+  .badge-row { display:flex; gap:10px; margin-bottom: 16px; }
+  .badge { flex:1; text-align:center; padding: 10px 6px; border-radius: 12px; font-weight: 800; font-size: 13px; }
+  .badge.old { background:#EAF1F4; color:#2B5A7C; border:1px solid #D3E2EC; }
+  .badge.new { background:#EAF6F0; color:#1E8F6D; border:1px solid #C9E9DC; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  thead th { text-align: left; font-size: 11px; color: #8496A3; font-weight: 700; padding: 8px 10px; border-bottom: 1px solid #DCE7EC; }
+  thead th:not(:first-child) { text-align: center; }
+  tbody td { padding: 12px 10px; border-bottom: 1px solid #EEF3F5; vertical-align: top; line-height: 1.6; }
+  tbody tr:last-child td { border-bottom: none; }
+  .row-label { font-weight: 700; color: #14304A; width: 22%; }
+  .col-old { color: #2B5A7C; width: 39%; }
+  .col-new { color: #1E7A5E; width: 39%; background: #F7FCFA; border-radius: 8px; }
+
+  .source { margin-top: 18px; padding-top: 14px; border-top: 1px dashed #DCE7EC; font-size: 11.5px; color: #8496A3; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="eyebrow"><i class="ti ti-battery-2"></i>&nbsp;TWO TRACKS OF ESS</span>
+    <h1>ESS 연계 태양광, 사실은 두 가지입니다</h1>
+    <p class="subtitle">누가 설치하느냐부터 목적까지, 완전히 다른 두 갈래 이야기예요</p>
+
+    <div class="badge-row">
+      <div class="badge old">배전망 ESS</div>
+      <div class="badge new">자가 ESS</div>
+    </div>
+
+    <table>
+      <thead><tr><th>구분</th><th>배전망 ESS</th><th>자가 ESS</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="row-label">설치 주체</td>
+          <td class="col-old">정부 공모 선정 통합발전소사업자</td>
+          <td class="col-new">개별 발전사업자 본인</td>
+        </tr>
+        <tr>
+          <td class="row-label">설치 위치</td>
+          <td class="col-old">배전선로 (계통 인프라)</td>
+          <td class="col-new">발전소 부지 내</td>
+        </tr>
+        <tr>
+          <td class="row-label">목적</td>
+          <td class="col-old">접속 대기·출력제어 해소</td>
+          <td class="col-new">REC 매출 증대, 수익 다각화</td>
+        </tr>
+        <tr>
+          <td class="row-label">비용 부담</td>
+          <td class="col-old">국비 (5,586억 원, 2026~2030)</td>
+          <td class="col-new">사업자 자기부담·조달</td>
+        </tr>
+        <tr>
+          <td class="row-label">발전사업자 역할</td>
+          <td class="col-old">신청 없이 간접 수혜</td>
+          <td class="col-new">직접 투자 결정</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="source">자료: 기후에너지환경부·아주경제(2026.7.10) · 한국에너지공단(KNREC)</div>
+  </div>
+</body>
+</html>
