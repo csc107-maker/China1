@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자가 ESS 연계 체크포인트</title>
+
+<meta property="og:title" content="자가 ESS 연계, 결정 전 체크포인트 3가지 | 에이팩브릿지파트너스" />
+<meta property="og:description" content="REC 가중치, 70% 출력제한 규정, 경제성까지 자가 ESS 연계 검토 시 확인해야 할 체크포인트를 정리했습니다." />
+<meta property="og:image" content="썸네일 이미지 URL" />
+<meta property="og:url" content="페이지 URL" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    background: #F4F8FB;
+    padding: 32px 16px;
+    color: #1F2D36;
+  }
+  .card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #DCE7EC;
+    border-radius: 20px;
+    padding: 36px 32px 32px;
+    box-shadow: 0 6px 24px rgba(11, 59, 73, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #F2A93B 0%, #1E8F6D 100%);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #C2760C;
+    background: #FDECC8;
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 21px; font-weight: 800; color: #0B3B49; line-height: 1.4; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .subtitle { font-size: 13.5px; color: #64798A; margin-bottom: 24px; line-height: 1.6; }
+
+  .list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 8px; }
+  .point { background: #F7FAFB; border: 1px solid #E4ECF0; border-radius: 14px; padding: 16px; display: flex; gap: 14px; }
+  .point .num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 9px; background: #FDECC8; color: #C2760C; display:flex; align-items:center; justify-content:center; font-family: 'IBM Plex Mono', monospace; font-weight: 800; font-size: 13px; }
+  .point .title { font-size: 13px; font-weight: 800; color: #14304A; margin-bottom: 5px; }
+  .point .text { font-size: 12px; color: #5B6B7A; line-height: 1.6; }
+  .point .text b { color: #C0392B; }
+
+  .source { margin-top: 18px; padding-top: 14px; border-top: 1px dashed #DCE7EC; font-size: 11.5px; color: #8496A3; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="eyebrow"><i class="ti ti-checklist"></i>&nbsp;SELF-ESS CHECKPOINTS</span>
+    <h1>자가 ESS 연계, 결정 전 체크포인트</h1>
+    <p class="subtitle">투자 결정 전 반드시 확인해야 할 3가지</p>
+
+    <div class="list">
+      <div class="point">
+        <div class="num">01</div>
+        <div>
+          <div class="title">REC 가중치, 최신 고시로 직접 확인</div>
+          <div class="text">태양광+ESS 연계 인센티브는 시점마다 조정돼 왔습니다. <b>이 글에서 특정 수치를 단정하지 않은 이유</b>이기도 해요. 한국에너지공단 신재생원스톱에서 최신 고시를 꼭 확인하세요.</div>
+        </div>
+      </div>
+      <div class="point">
+        <div class="num">02</div>
+        <div>
+          <div class="title">70% 출력제한 규정, 설계 단계부터 반영</div>
+          <div class="text">(ESS 미경유 계통공급 출력 + ESS 방전출력)의 합이 태양광 설비용량의 <b>70%를 넘으면 그날 방전량의 REC 가중치는 0</b>이 됩니다. 무작정 용량을 키우는 게 능사가 아니에요.</div>
+        </div>
+      </div>
+      <div class="point">
+        <div class="num">03</div>
+        <div>
+          <div class="title">실제 견적 기준으로 회수기간 계산</div>
+          <div class="text">ESS 설치비가 태양광 건설비보다 비쌌던 사례도 있었습니다. 최소 2~3개 업체 견적을 받아, 일반화된 수익률이 아닌 <b>내 프로젝트 기준 회수기간</b>을 직접 계산해보세요.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source">자료: 한국에너지공단(KNREC) FAQ · 전자신문(2017.2.21, 역사적 참고) · 업계 견적 사례 종합</div>
+  </div>
+</body>
+</html>
