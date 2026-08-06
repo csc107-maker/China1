@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OCI홀딩스 vs 한화솔루션 비교 | 폴리실리콘 관세 수혜 분석</title>
+
+<meta property="og:title" content="OCI홀딩스 vs 한화솔루션, 폴리실리콘 관세 수혜 구조 한눈에 비교" />
+<meta property="og:description" content="사업구조, 미국 내 생산기지, 2026년 2분기 실적, 8월 5일 주가 반응까지 — OCI홀딩스와 한화솔루션의 공급망 포지션을 표로 비교했습니다." />
+<meta property="og:image" content="[여기에_썸네일_이미지_URL을_입력하세요]" />
+<meta property="og:url" content="[여기에_블로그_게시글_URL을_입력하세요]" />
+<meta property="og:type" content="article" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css" />
+
+<style>
+  :root{
+    --bg-page:#FAF6EC;
+    --bg-card:#FFFFFF;
+    --bg-soft:#F2ECDA;
+    --ink-900:#1E2A33;
+    --ink-700:#3B4A56;
+    --ink-500:#6B7A84;
+    --gold-600:#B9832E;
+    --gold-200:#E9CE94;
+    --gold-050:#FBF4E2;
+    --navy-700:#1C3D5C;
+    --navy-050:#EAF0F5;
+    --teal-600:#1F7A67;
+    --teal-050:#E7F4F0;
+    --rust-600:#A8402E;
+    --rust-050:#FBEAE6;
+    --line-hair:#E3D9BE;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg-page);
+    font-family:'Pretendard','Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--ink-900);-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:780px;margin:0 auto;padding:36px 20px 44px;}
+  .eyebrow{
+    display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;
+    letter-spacing:.04em;color:var(--gold-600);text-transform:uppercase;margin-bottom:10px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-600);}
+  h1.title{
+    font-family:'Noto Serif KR',serif;font-weight:900;font-size:25px;line-height:1.4;
+    margin:0 0 8px;color:var(--ink-900);
+  }
+  .sub{font-size:14.5px;color:var(--ink-500);line-height:1.6;margin:0 0 22px;}
+
+  /* company header cards */
+  .co-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
+  .co-card{
+    border-radius:14px;padding:18px 16px;border:1px solid var(--line-hair);background:var(--bg-card);
+    position:relative;overflow:hidden;
+  }
+  .co-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:5px;
+  }
+  .co-card.oci::before{background:var(--gold-600);}
+  .co-card.hanwha::before{background:var(--navy-700);}
+  .co-ticker{
+    font-family:'Roboto Mono',monospace;font-size:11px;font-weight:700;color:var(--ink-500);
+    margin-bottom:4px;
+  }
+  .co-name{font-size:17px;font-weight:800;color:var(--ink-900);margin-bottom:6px;}
+  .co-role{
+    display:inline-block;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;
+  }
+  .co-card.oci .co-role{background:var(--gold-050);color:var(--gold-600);}
+  .co-card.hanwha .co-role{background:var(--navy-050);color:var(--navy-700);}
+
+  /* comparison table */
+  .cmp-table{width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--line-hair);border-radius:14px;overflow:hidden;}
+  .cmp-table th, .cmp-table td{padding:13px 14px;text-align:left;vertical-align:top;font-size:13px;line-height:1.6;}
+  .cmp-table thead th{
+    background:var(--bg-soft);font-size:11.5px;font-weight:800;color:var(--ink-700);
+    letter-spacing:.02em;border-bottom:1px solid var(--line-hair);
+  }
+  .cmp-table thead th:first-child{width:26%;}
+  .cmp-table tbody th{
+    font-weight:700;font-size:12.5px;color:var(--ink-500);background:var(--bg-page);
+    border-right:1px solid var(--line-hair);
+  }
+  .cmp-table tbody tr{border-bottom:1px solid var(--bg-soft);}
+  .cmp-table tbody tr:last-child{border-bottom:none;}
+  .cmp-table td.oci-col{border-left:3px solid var(--gold-200);color:var(--ink-700);}
+  .cmp-table td.hanwha-col{border-left:3px solid var(--navy-050);color:var(--ink-700);}
+  .cmp-table b{color:var(--ink-900);}
+  .num-mono{font-family:'Roboto Mono',monospace;font-weight:700;}
+
+  .stock-row{display:flex;align-items:center;gap:6px;font-weight:700;}
+  .stock-row.up{color:var(--rust-600);}
+  .stock-row i{font-size:15px;}
+
+  .footer-note{
+    margin-top:18px;padding-top:16px;border-top:1px solid var(--line-hair);
+    font-size:11.5px;color:var(--ink-500);line-height:1.7;
+  }
+
+  /* mobile: convert table to stacked cards */
+  @media (max-width:560px){
+    h1.title{font-size:21px;}
+    .wrap{padding:26px 14px 32px;}
+    .co-grid{grid-template-columns:1fr;}
+    .cmp-table thead{display:none;}
+    .cmp-table, .cmp-table tbody, .cmp-table tr, .cmp-table td, .cmp-table th{display:block;width:100%;}
+    .cmp-table tbody tr{padding:12px 14px 4px;border-bottom:1px solid var(--line-hair);}
+    .cmp-table tbody th{
+      border-right:none;background:transparent;padding:0 0 6px;
+      display:flex;align-items:center;gap:6px;
+    }
+    .cmp-table tbody th::before{content:"▸";color:var(--gold-600);}
+    .cmp-table td{padding:6px 0 10px 4px;border-left:3px solid var(--line-hair) !important;padding-left:10px;margin-bottom:6px;}
+    .cmp-table td.oci-col{border-left-color:var(--gold-600) !important;}
+    .cmp-table td.hanwha-col{border-left-color:var(--navy-700) !important;}
+    .cmp-table td.oci-col::before{content:"OCI홀딩스  ";font-size:10.5px;font-weight:800;color:var(--gold-600);display:block;}
+    .cmp-table td.hanwha-col::before{content:"한화솔루션  ";font-size:10.5px;font-weight:800;color:var(--navy-700);display:block;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow"><span class="dot"></span>COMPARISON · 2026년 2분기 스냅샷</div>
+  <h1 class="title">OCI홀딩스 vs 한화솔루션,<br>수혜 구조는 서로 다릅니다</h1>
+  <p class="sub">업스트림(원료) 수혜주와 다운스트림(제조) 수혜주의 차이를 한눈에 비교했습니다</p>
+
+  <div class="co-grid">
+    <div class="co-card oci">
+      <div class="co-ticker">KRX 010060</div>
+      <div class="co-name">OCI홀딩스</div>
+      <span class="co-role"><i class="ti ti-flask" style="font-size:12px;"></i> 업스트림 · 폴리실리콘·웨이퍼</span>
+    </div>
+    <div class="co-card hanwha">
+      <div class="co-ticker">KRX 009830</div>
+      <div class="co-name">한화솔루션 (한화큐셀)</div>
+      <span class="co-role"><i class="ti ti-solar-panel" style="font-size:12px;"></i> 다운스트림 · 셀·모듈</span>
+    </div>
+  </div>
+
+  <table class="cmp-table">
+    <thead>
+      <tr><th>비교 항목</th><th>OCI홀딩스</th><th>한화솔루션</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>핵심 사업</th>
+        <td class="oci-col">말레이시아 OCI테라서스 <b>폴리실리콘</b> + 베트남 <b>웨이퍼</b> 생산</td>
+        <td class="hanwha-col">美 조지아 밸류체인 기반 <b>셀·모듈</b> 제조 (한화큐셀)</td>
+      </tr>
+      <tr>
+        <th>미국 내 생산기지</th>
+        <td class="oci-col">직접 생산기지 없음 (원료는 해외산 · 美 내 태양광 개발사업 OCI에너지 별도 보유)</td>
+        <td class="hanwha-col">조지아 달튼(모듈 5.1GW) + 카터스빌(셀·잉곳·웨이퍼) 수직계열화</td>
+      </tr>
+      <tr>
+        <th>비중국 공급망 포지션</th>
+        <td class="oci-col">세계 3대 비중국 폴리실리콘 생산자 중 하나 <span class="num-mono">(헴록·바커·OCI)</span></td>
+        <td class="hanwha-col">美 최대 규모 태양광 수직계열화 제조사</td>
+      </tr>
+      <tr>
+        <th>2026년 2분기 매출</th>
+        <td class="oci-col"><span class="num-mono">1조 231억원</span> (전년比 +31.8%)</td>
+        <td class="hanwha-col"><span class="num-mono">4조 5,826억원</span></td>
+      </tr>
+      <tr>
+        <th>2026년 2분기 영업이익</th>
+        <td class="oci-col"><span class="num-mono">1,080억원</span> (3개 분기 연속 흑자)</td>
+        <td class="hanwha-col"><span class="num-mono">3,065억원</span> (신재생 부문 1,664억원, 전분기比 +168%)</td>
+      </tr>
+      <tr>
+        <th>관세 시나리오 민감도</th>
+        <td class="oci-col">비중국산 프리미엄 확대 시 수혜 ↑ / 단, 일괄관세 적용 시 말레이시아산도 규제 대상 포함 우려</td>
+        <td class="hanwha-col">원료 원가상승 방어 + 완제품 가격경쟁력 ↑ / 단, 유상증자發 주가 탄력 제한 이슈 상존</td>
+      </tr>
+      <tr>
+        <th>8월 5일 주가 반응</th>
+        <td class="oci-col"><span class="stock-row up"><i class="ti ti-arrow-up-right"></i> +9.56% (24만6,500원)</span></td>
+        <td class="hanwha-col"><span class="stock-row up"><i class="ti ti-arrow-up-right"></i> +11.57% (2만9,900원)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer-note">
+    출처: 금융감독원 전자공시시스템(DART) 2026년 2분기 잠정실적 공시, 한국경제(2026.8.5), CEOSCOREDAILY(2026.8.3), 코리아헤럴드(2026.6.9), EBN뉴스센터 등 · 수치는 각 사 공시 및 보도 기준이며 정정 공시 시 변경될 수 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
