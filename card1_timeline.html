@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>폴리실리콘 232조 타임라인 | OCI홀딩스·한화솔루션 관세 이슈</title>
+
+<meta property="og:title" content="美 폴리실리콘 Section 232 조사 타임라인 정리" />
+<meta property="og:description" content="2025년 7월 조사 개시부터 2026년 8월 가격 하한제·관세 발표 임박까지, 미국 폴리실리콘 무역확장법 232조 전개 과정을 시간순으로 정리했습니다." />
+<meta property="og:image" content="[여기에_썸네일_이미지_URL을_입력하세요]" />
+<meta property="og:url" content="[여기에_블로그_게시글_URL을_입력하세요]" />
+<meta property="og:type" content="article" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css" />
+
+<style>
+  :root{
+    --bg-page:#FAF6EC;
+    --bg-card:#FFFFFF;
+    --bg-soft:#F2ECDA;
+    --ink-900:#1E2A33;
+    --ink-700:#3B4A56;
+    --ink-500:#6B7A84;
+    --gold-600:#B9832E;
+    --gold-200:#E9CE94;
+    --gold-050:#FBF4E2;
+    --navy-700:#1C3D5C;
+    --navy-050:#EAF0F5;
+    --teal-600:#1F7A67;
+    --teal-050:#E7F4F0;
+    --rust-600:#A8402E;
+    --rust-050:#FBEAE6;
+    --line-hair:#E3D9BE;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg-page);
+    font-family:'Pretendard','Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--ink-900);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:36px 20px 44px;
+  }
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.04em;
+    color:var(--gold-600);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-600);}
+  h1.title{
+    font-family:'Noto Serif KR',serif;
+    font-weight:900;
+    font-size:26px;
+    line-height:1.4;
+    margin:0 0 8px;
+    color:var(--ink-900);
+  }
+  .sub{
+    font-size:14.5px;
+    color:var(--ink-500);
+    line-height:1.6;
+    margin:0 0 6px;
+  }
+  .floorline{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:18px 0 30px;
+    padding:10px 14px;
+    background:var(--gold-050);
+    border:1px dashed var(--gold-600);
+    border-radius:10px;
+  }
+  .floorline i{color:var(--gold-600);font-size:18px;}
+  .floorline span{
+    font-size:13px;
+    color:var(--ink-700);
+    font-weight:600;
+  }
+  .floorline b{color:var(--gold-600);}
+
+  .timeline{
+    position:relative;
+    margin-top:8px;
+    padding-left:36px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:11px;
+    top:6px;
+    bottom:6px;
+    width:2px;
+    background:linear-gradient(to bottom, var(--gold-600), var(--navy-700) 60%, var(--line-hair));
+    border-radius:2px;
+  }
+  .item{
+    position:relative;
+    padding-bottom:28px;
+  }
+  .item:last-child{padding-bottom:0;}
+  .node{
+    position:absolute;
+    left:-36px;
+    top:2px;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:var(--bg-card);
+    border:2px solid var(--gold-600);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .node i{font-size:13px;color:var(--gold-600);}
+  .item.done .node{border-color:var(--teal-600);}
+  .item.done .node i{color:var(--teal-600);}
+  .item.warn .node{border-color:var(--rust-600);}
+  .item.warn .node i{color:var(--rust-600);}
+  .item.next .node{border-color:var(--navy-700); border-style:dashed;}
+  .item.next .node i{color:var(--navy-700);}
+
+  .card{
+    background:var(--bg-card);
+    border:1px solid var(--line-hair);
+    border-radius:14px;
+    padding:16px 18px;
+    box-shadow:0 1px 2px rgba(30,42,51,.04);
+  }
+  .meta-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+  }
+  .date{
+    font-family:'Roboto Mono',monospace;
+    font-weight:700;
+    font-size:13px;
+    color:var(--navy-700);
+    background:var(--navy-050);
+    padding:3px 9px;
+    border-radius:999px;
+  }
+  .badge{
+    font-size:11.5px;
+    font-weight:700;
+    padding:3px 9px;
+    border-radius:999px;
+  }
+  .badge.done{background:var(--teal-050);color:var(--teal-600);}
+  .badge.warn{background:var(--rust-050);color:var(--rust-600);}
+  .badge.next{background:var(--navy-050);color:var(--navy-700);}
+  .item-title{
+    font-weight:800;
+    font-size:15.5px;
+    margin:0 0 6px;
+    color:var(--ink-900);
+    line-height:1.45;
+  }
+  .item-desc{
+    font-size:13.5px;
+    line-height:1.65;
+    color:var(--ink-700);
+    margin:0;
+  }
+  .src{
+    display:block;
+    margin-top:9px;
+    font-size:11.5px;
+    color:var(--ink-500);
+  }
+  .footer-note{
+    margin-top:26px;
+    padding-top:16px;
+    border-top:1px solid var(--line-hair);
+    font-size:11.5px;
+    color:var(--ink-500);
+    line-height:1.7;
+  }
+  @media (max-width:480px){
+    h1.title{font-size:22px;}
+    .wrap{padding:26px 14px 32px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow"><span class="dot"></span>TIMELINE · SECTION 232</div>
+  <h1 class="title">폴리실리콘 무역확장법 232조,<br>여기까지 왔습니다</h1>
+  <p class="sub">2025년 7월 조사 개시부터 2026년 8월 가격 하한제·관세 발표 임박까지 — 시간순 정리</p>
+
+  <div class="floorline">
+    <i class="ti ti-line-dashed"></i>
+    <span>정책 핵심 메커니즘: <b>최저수입가격제(MIP)</b> + <b>관세</b> 하이브리드 방식 검토 중</span>
+  </div>
+
+  <div class="timeline">
+
+    <div class="item done">
+      <div class="node"><i class="ti ti-flag"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2025.07.01</span>
+          <span class="badge done">조사 개시</span>
+        </div>
+        <p class="item-title">美 상무부 BIS, 폴리실리콘 Section 232 국가안보 조사 공식 개시</p>
+        <p class="item-desc">폴리실리콘과 웨이퍼·태양전지·모듈 등 파생제품 전반이 조사 대상에 포함됨. 법정 조사 기한은 최대 270일(2026년 3월).</p>
+        <span class="src">출처: 美 상무부 BIS, White &amp; Case LLP 리걸 얼럿</span>
+      </div>
+    </div>
+
+    <div class="item done">
+      <div class="node"><i class="ti ti-messages"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2025.07 – 11</span>
+          <span class="badge done">의견 수렴</span>
+        </div>
+        <p class="item-title">업계 약 50개 단체 의견서 제출, 관세율할당(TRQ) 구조 제안</p>
+        <p class="item-desc">美제조업연대(CPA)는 비중국산 폴리실리콘 연 4만 톤까지 무관세 후 초과분에 kg당 10달러 부과하는 안을 제시. 초당적 의원들도 비중국 공급 필요성 강조.</p>
+        <span class="src">출처: Coalition for a Prosperous America, PV-Tech</span>
+      </div>
+    </div>
+
+    <div class="item warn">
+      <div class="node"><i class="ti ti-alert-triangle"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2026.01.14</span>
+          <span class="badge warn">中 보복 조치</span>
+        </div>
+        <p class="item-title">중국, 韓·美산 폴리실리콘 반덤핑 관세 5년 추가 연장</p>
+        <p class="item-desc">중국이 미국·한국산 태양광용 폴리실리콘에 53.3~57% 반덤핑 관세를 재연장. 美 조치에 앞선 선제적 방어 성격의 조치로 해석.</p>
+        <span class="src">출처: Tech Times(중국 상무부 공고 인용)</span>
+      </div>
+    </div>
+
+    <div class="item done">
+      <div class="node"><i class="ti ti-chart-line"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2026.06</span>
+          <span class="badge done">시나리오 분석</span>
+        </div>
+        <p class="item-title">Roth Capital, 관세 시 원가 영향 모델링 발표 · 결정 8월로 지연</p>
+        <p class="item-desc">기본 시나리오 와트당 +0.10달러, 최악 시나리오 모듈 원가 최대 63% 상승 전망. 동시에 232조 최종 결론이 8월로 재차 연기됨.</p>
+        <span class="src">출처: Roth Capital Partners(PV Magazine USA 인용)</span>
+      </div>
+    </div>
+
+    <div class="item done">
+      <div class="node"><i class="ti ti-report-money"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2026.07.22–23</span>
+          <span class="badge done">실적 발표</span>
+        </div>
+        <p class="item-title">OCI홀딩스·한화솔루션 2분기 실적 발표</p>
+        <p class="item-desc">양사 모두 실적 개선세를 보였으나, OCI홀딩스는 232조 지연에 따른 고객사 관망세로 핵심 폴리실리콘 판매는 오히려 부진했다고 언급.</p>
+        <span class="src">출처: 금융감독원 전자공시(DART), CEOSCOREDAILY</span>
+      </div>
+    </div>
+
+    <div class="item warn">
+      <div class="node"><i class="ti ti-news"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2026.08.04</span>
+          <span class="badge warn">단독 보도</span>
+        </div>
+        <p class="item-title">로이터, "가격 하한제+관세 혼합안 준비" 단독 보도</p>
+        <p class="item-desc">보도 직후 뉴욕증시에서 코닝 +9.4%, 퍼스트솔라 장중 +10%대 등 美 태양광·소재주 일제히 급등.</p>
+        <span class="src">출처: Reuters(Nichola Groom), Investing.com, Yahoo Finance</span>
+      </div>
+    </div>
+
+    <div class="item warn">
+      <div class="node"><i class="ti ti-trending-up"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2026.08.05</span>
+          <span class="badge warn">국내 급등</span>
+        </div>
+        <p class="item-title">국내 태양광 테마주 동반 급등</p>
+        <p class="item-desc">한화솔루션 +11.57%(2만9,900원), OCI홀딩스 +9.56%(24만6,500원). SK이터닉스, HD현대에너지솔루션도 동반 강세.</p>
+        <span class="src">출처: 한국경제, 한국거래소</span>
+      </div>
+    </div>
+
+    <div class="item next">
+      <div class="node"><i class="ti ti-hourglass"></i></div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="date">2026.08 (예정)</span>
+          <span class="badge next">발표 대기 · 미확정</span>
+        </div>
+        <p class="item-title">트럼프 대통령 최종 포고문 서명 전망</p>
+        <p class="item-desc">업계에서는 "이달 말" 발표를 목표로 거론하지만 공식 확정된 일정은 아니며, 그간 여러 차례 지연된 전례가 있어 추가 연기 가능성도 배제할 수 없음.</p>
+        <span class="src">출처: 업계 관측(Reuters, Roth Capital) — 확정 정보 아님</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-note">
+    ※ 본 타임라인은 2026년 8월 6일 기준 공개된 보도자료를 정리한 것으로, 이후 정책 발표 내용에 따라 달라질 수 있습니다. 투자 판단의 근거로 단독 사용하지 마시고 최신 공시를 함께 확인하세요.
+  </div>
+
+</div>
+</body>
+</html>
