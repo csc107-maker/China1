@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>경매 vs 일반매매 최종 비교</title>
+
+<meta property="og:title" content="경매 vs 일반매매 최종 비교 — 나에게 유리한 선택은?" />
+<meta property="og:description" content="가격, 취득세, 대출, 실거주의무, 리스크까지 경매와 일반매매를 항목별로 비교하고 각각 어떤 사람에게 적합한지 정리했습니다." />
+<meta property="og:image" content="https://example.com/thumbnail-auction-vs-purchase.png" />
+<meta property="og:url" content="https://example.com/auction-vs-purchase-guide" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/dist/tabler-icons.min.css" />
+
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 16px;
+    background: #F5F6F2;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #23262B;
+  }
+  .card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #E2E4DD;
+    border-radius: 14px;
+    padding: 32px 26px 28px;
+    box-shadow: 0 1px 3px rgba(30,58,95,0.06), 0 8px 24px rgba(30,58,95,0.05);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #A8791F;
+    background: #F4ECDA;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 6px;
+    color: #1E3A5F;
+    text-align: center;
+  }
+  .sub {
+    font-size: 14px;
+    color: #667085;
+    margin: 0 0 22px;
+    line-height: 1.55;
+    text-align: center;
+  }
+  .vs-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .vs-badge {
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #1E3A5F;
+    color: #fff;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 900;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 5px #FFFFFF;
+    z-index: 2;
+  }
+  .panel {
+    border-radius: 12px;
+    padding: 18px 14px 16px;
+    border: 1px solid #E2E4DD;
+  }
+  .panel.auction { background: #F4ECDA; border-color: #E4D4AC; }
+  .panel.normal { background: #E8EEF5; border-color: #CCD9E8; }
+  .panel-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .panel.auction .panel-head { color: #8A6414; }
+  .panel.normal .panel-head { color: #1E3A5F; }
+  .row {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 9px 10px;
+    margin-bottom: 7px;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+  .row b {
+    display: block;
+    font-size: 11px;
+    color: #9AA1AC;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .verdict {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: #FAFAF7;
+    border: 1px dashed #E2E4DD;
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .verdict i { color: #A63D40; font-size: 18px; margin-top: 2px; }
+  .verdict p { margin: 0; font-size: 13px; line-height: 1.65; color: #45494F; }
+  .fit-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .fit {
+    font-size: 12.5px;
+    line-height: 1.6;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+  .fit.a { background: #FBF7ED; color: #6B4E12; }
+  .fit.n { background: #F3F6FA; color: #1E3A5F; }
+  .fit strong { display: block; margin-bottom: 4px; font-family: 'Noto Serif KR', serif; }
+  .source {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px dashed #E2E4DD;
+    font-size: 11.5px;
+    color: #9AA1AC;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="eyebrow"><i class="ti ti-scale-outline"></i>&nbsp;최종 비교</span>
+    <h1>경매 vs 일반매매, 결국 어느 쪽이 유리할까?</h1>
+    <p class="sub">가격부터 리스크까지, 항목별로 비교하면 답이 조금 더 명확해집니다.</p>
+
+    <div class="vs-wrap">
+      <div class="vs-badge">VS</div>
+
+      <div class="panel auction">
+        <div class="panel-head"><i class="ti ti-gavel"></i> 법원 경매</div>
+        <div class="row"><b>가격</b>시세 대비 저렴 가능 (단, 최근 낙찰가율 상승 중)</div>
+        <div class="row"><b>취득세</b>매매와 동일 세율, 낙찰가 기준 과세</div>
+        <div class="row"><b>대출</b>일반 주담대와 동일 규제(2025.6.27~), 취급기관 제한적</div>
+        <div class="row"><b>토허구역 실거주의무</b>예외 적용 (정책 변동 가능)</div>
+        <div class="row"><b>리스크</b>명도 리스크, 권리분석 실패 위험, 내부 확인 불가</div>
+      </div>
+
+      <div class="panel normal">
+        <div class="panel-head"><i class="ti ti-home"></i> 일반 매매</div>
+        <div class="row"><b>가격</b>시세대로 지불</div>
+        <div class="row"><b>취득세</b>경매와 동일 세율, 실거래가 기준 과세</div>
+        <div class="row"><b>대출</b>시중은행 주담대, 상품·금리 선택폭 넓음</div>
+        <div class="row"><b>토허구역 실거주의무</b>원칙 적용 (일부 완화 중)</div>
+        <div class="row"><b>리스크</b>매물 상태 사전 확인 가능, 명도 걱정 없음</div>
+      </div>
+    </div>
+
+    <div class="fit-row">
+      <div class="fit a">
+        <strong>이런 분께 경매가 맞습니다</strong>
+        시세차익을 노리는 투자수요, 토허구역에서 세입자를 두고 싶은 분, 권리분석·명도에 자신 있는 분
+      </div>
+      <div class="fit n">
+        <strong>이런 분께 매매가 맞습니다</strong>
+        빠른 실입주가 필요한 분, 저금리 주담대를 원하는 분, 리스크를 최소화하고 싶은 실수요자
+      </div>
+    </div>
+
+    <div class="verdict">
+      <i class="ti ti-info-circle"></i>
+      <p>세금과 대출은 사실상 동일한 규칙을 따릅니다. 선택의 무게중심은 <b>가격 협상력, 리스크 감내 수준, 실거주 여부</b>에 달려 있습니다.</p>
+    </div>
+
+    <p class="source">자료: 지방세법, 금융위원회·국토교통부 발표 종합 · 2026년 8월 기준, 개별 상담 권장</p>
+  </div>
+</body>
+</html>
